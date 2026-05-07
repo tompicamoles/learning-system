@@ -11,16 +11,13 @@ As a software engineer working in a large codebase, you encounter patterns, arch
 Six Claude Code skills that form a complete learning loop:
 
 ```
-  ┌──────────────┐      ┌──────────────┐      ┌──────────────┐
-  │ add-to-backlog│─────>│ crash-course │─────>│ refresher-exam│
-  │ (queue topic) │      │ (30 min)     │      │ (spaced rep.) │
-  └──────────────┘      └──────────────┘      └───────┬───────┘
-         ▲                      │                      │
-         │                      │                      │ poorly scored?
-         │               ┌──────▼──────┐               │ reschedule
-         └───────────────│quick-tutorial│<──────────────┘
-                         │ (5-10 min)  │
-                         └─────────────┘
+  add-to-backlog -----> crash-course -----> refresher-exam
+  (queue topic)         (30 min)            (spaced rep.)
+       ^                     |                    |
+       |                     v                    | poorly scored?
+       |               quick-tutorial             | reschedule
+       |               (5-10 min)                 |
+       +------------------------------------------+
 ```
 
 Every lesson is grounded in real code from your codebase (file:line citations), and every exam question references actual code you work with daily.
@@ -41,13 +38,13 @@ Every lesson is grounded in real code from your codebase (file:line citations), 
 ### Data Flow
 
 ```
-learning-goals.md ──────── read by all skills for priority context
-       │
-       ├── crash-course ──> exam-results.md ──> Notion card (pager)
-       ├── quick-tutorial ─> exam-results.md ──> Notion card (pager)
-       └── refresher-exam ─> exam-results.md (read + append)
-                                                  │
-                                    add-to-backlog ├── Notion "Learning Backlog" DB
+learning-goals.md        read by all skills for priority context
+       |
+       |-- crash-course ----> exam-results.md ----> Notion card (pager)
+       |-- quick-tutorial --> exam-results.md ----> Notion card (pager)
+       |-- refresher-exam -> exam-results.md (read + append)
+       |
+       |-- add-to-backlog -----------------------> Notion "Learning Backlog" DB
 ```
 
 ### Local-first Design
