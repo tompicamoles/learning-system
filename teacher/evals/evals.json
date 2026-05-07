@@ -1,0 +1,26 @@
+{
+  "skill_name": "teacher",
+  "evals": [
+    {
+      "id": 1,
+      "name": "concept-with-codebase-grounding",
+      "prompt": "Can you explain how the outbox pattern works? I've heard of it but never really understood why you'd use it instead of just publishing events directly.",
+      "expected_output": "Should build mental model of outbox pattern, find real examples in the declaration monorepo, walk through actual code with file:line citations, and include all three mandatory sections (Underlying principles, System design angle, What to take away).",
+      "files": []
+    },
+    {
+      "id": 2,
+      "name": "code-review-as-learning",
+      "prompt": "I'm trying to understand aggregate design in DDD. Can you find an aggregate in this codebase and walk me through why it was designed that way? I want to understand what makes a good aggregate boundary.",
+      "expected_output": "Should search the codebase for a real aggregate, explain Vernon's 4 rules using the real example, cite file:line, connect to domain context, and include the mandatory sections.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "name": "short-conceptual-question",
+      "prompt": "What's the difference between a value object and an entity? Keep it short.",
+      "expected_output": "Should respect 'keep it short' but still include the three mandatory sections (even if brief), use a clear analogy, and ideally ground in a real codebase example.",
+      "files": []
+    }
+  ]
+}
