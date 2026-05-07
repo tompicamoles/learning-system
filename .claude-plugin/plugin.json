@@ -1,0 +1,11 @@
+{
+  "name": "learning-system",
+  "description": "A structured skill-up system for software engineers. Crash courses, quick tutorials, spaced-repetition exams, and a Notion backlog — all grounded in your actual codebase.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Tom Picamoles",
+    "email": "tom.picamoles@payfit.com"
+  },
+  "repository": "https://github.com/tompicamoles/learning-system",
+  "license": "MIT"
+}

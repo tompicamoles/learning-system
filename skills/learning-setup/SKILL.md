@@ -5,7 +5,9 @@ description: "Use when the user types /learning-setup, or says 'setup learning g
 
 # Learning Setup
 
-One-time setup (or re-run to update) for the learning system. Two phases: goal coaching and Notion DB creation.
+One-time setup (or re-run to update) for the learning system. Three phases: goal coaching, write goals, and Notion DB creation.
+
+**First run**: Create the data directory `~/.claude/skills/learning-system/` if it does not exist. This is where user-specific config and goals are stored.
 
 ## Phase 1: Goal Coaching
 

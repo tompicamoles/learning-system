@@ -71,13 +71,15 @@ The refresher-exam skill uses a simplified SM-2 algorithm:
 - A Notion workspace
 - A codebase to learn from
 
-### Step 1: Install the skills
+### Step 1: Install the plugin
 
-```bash
-git clone https://github.com/tompicamoles/learning-system.git ~/.claude/skills/learning-system
+In Claude Code, run:
+
+```
+/plugin install https://github.com/tompicamoles/learning-system
 ```
 
-Or manually copy the `learning-system/` folder to `~/.claude/skills/learning-system/`.
+This installs all 6 skills as a Claude Code plugin. Restart Claude Code after installing.
 
 ### Step 2: Run the setup
 
@@ -185,20 +187,27 @@ Page body contains the lesson pager after teaching.
 ## Folder Structure
 
 ```
-~/.claude/skills/learning-system/
-├── README.md                      # This file
-├── learning-goals.md              # North-star goals (shared data)
-├── learning-config.md             # Notion DB reference (shared config)
-├── teacher/
-│   └── SKILL.md                   # Core teaching sub-skill
-├── crash-course/
-│   └── SKILL.md                   # 30-min crash course + exam
-├── quick-tutorial/
-│   └── SKILL.md                   # 5-10 min micro-lesson
-├── refresher-exam/
-│   └── SKILL.md                   # Spaced repetition exam
-├── add-to-backlog/
-│   └── SKILL.md                   # Notion backlog card creation
-└── learning-setup/
-    └── SKILL.md                   # One-time setup + goal coaching
+learning-system/                       # GitHub repo / plugin root
+├── .claude-plugin/
+│   └── plugin.json                    # Plugin manifest
+├── README.md                          # This file
+├── learning-goals.md                  # Template (copied to user data dir on setup)
+├── learning-config.md                 # Template (copied to user data dir on setup)
+└── skills/
+    ├── teacher/
+    │   └── SKILL.md                   # Core teaching sub-skill
+    ├── crash-course/
+    │   └── SKILL.md                   # 30-min crash course + exam
+    ├── quick-tutorial/
+    │   └── SKILL.md                   # 5-10 min micro-lesson
+    ├── refresher-exam/
+    │   └── SKILL.md                   # Spaced repetition exam
+    ├── add-to-backlog/
+    │   └── SKILL.md                   # Notion backlog card creation
+    └── learning-setup/
+        └── SKILL.md                   # One-time setup + goal coaching
+
+~/.claude/skills/learning-system/      # User data dir (created by /learning-setup)
+├── learning-goals.md                  # Your personal goals
+└── learning-config.md                 # Your Notion DB reference + exam ledger path
 ```
