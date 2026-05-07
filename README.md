@@ -87,13 +87,13 @@ This installs all 6 skills as a Claude Code plugin. Restart Claude Code after in
 /learning-setup
 ```
 
-This starts a guided coaching conversation to define your learning goals. You'll be asked:
-- What "next level" means for you
-- Where your biggest gaps are
-- What patterns you encounter daily but don't fully understand
-- Your time horizon (this quarter vs this year)
+This starts a guided coaching conversation in 3 steps:
 
-Then provide an empty Notion page URL. The skill creates the "Learning Backlog" database inside it with the correct schema. It also auto-detects your project's memory directory and creates the exam results ledger there.
+1. **What are you trying to achieve?** — Describe your objective and context (e.g. "I'm a junior wanting to reach senior level", "I'm new to this codebase", "I want to learn DDD")
+2. **Tell me more** — Tailored follow-up questions based on your answer. If a codebase is available, the system can optionally analyze it (tech stack, patterns, architecture) to enrich suggestions. No pressure to narrow down — just describe your situation.
+3. **Time horizon** — What do you want solid this quarter vs this year?
+
+The system synthesizes your answers into **goals** (capabilities you want to reach, not tech topics to learn) and asks you to confirm. Then provide an empty Notion page URL — the skill creates the "Learning Backlog" database and auto-detects your project's memory directory for the exam results ledger.
 
 ### Step 3: Populate the backlog
 

@@ -11,15 +11,58 @@ One-time setup (or re-run to update) for the learning system. Three phases: goal
 
 ## Phase 1: Goal Coaching
 
-Run a short coaching conversation to help the user articulate skill-up goals. Ask questions one at a time, wait for answers:
+Run a short coaching conversation. Ask questions one at a time, wait for answers.
 
-1. "What does 'next level' mean for you right now?"
-2. "Where do you feel the biggest gaps in your day-to-day work?"
-3. "What patterns do you encounter daily but don't fully understand?"
-4. "Are there architectural or design topics you want to go deeper on?"
-5. "What's your time horizon -- what do you want nailed this quarter vs this year?"
+### Q1: Context and objective
 
-Synthesize answers into concrete, tagged goals. Present the proposed goals in a table for confirmation before writing.
+"What are you trying to achieve? What's the context?"
+
+Give examples to help the user frame their answer:
+- "I'm a junior SW engineer and I want to reach the confirmed/senior level"
+- "I'm new to this company and I want to learn the codebase and its architecture"
+- "I used to work in a Java environment and I want to learn TypeScript idioms"
+- "I want to skill up on DDD -- I know the theory but struggle to apply it in real code"
+- "I'm preparing for a system design interview"
+- "I want to understand our infrastructure (Terraform, AWS, CI/CD) better"
+
+### Q2: Tell me more
+
+**Codebase analysis (optional, before asking Q2):**
+- If running inside a codebase, ask: "I can scan this codebase to tailor my suggestions — want me to?"
+- If NOT running inside a codebase, ask: "Do you have a codebase you'd like me to analyze? If so, share the path(s)."
+- If the user agrees, scan: project structure, package.json, tsconfig, Dockerfile, CI config, terraform files. Identify languages, frameworks, libraries, architectural patterns, infra tools.
+- Use findings to enrich the Q2 suggestions below. If the user declines or no codebase is available, use generic suggestions based on Q1.
+
+Then ask: "Tell me more about your situation so I can tailor the goals."
+
+Suggest 3-4 dimensions to elaborate on, tailored to Q1 and enriched with codebase findings. For instance:
+
+- If Q1 = "junior wanting to level up" and codebase uses NestJS + MongoDB + hexagonal:
+  - "I see the codebase uses NestJS, MongoDB, DDD with hexagonal architecture, SQS, Lambdas, and Terraform. Which of these do you work with most?"
+  - "What kind of tasks do you handle day-to-day? (features, bug fixes, reviews, ops)"
+  - "How long have you been in the role / with the codebase?"
+- If Q1 = "new to the company":
+  - "I scanned the repo — here's what I found: [tech summary]. What's your previous experience with these?"
+  - "What team/domain are you joining?"
+- If Q1 = "learning a specific topic" (e.g. DDD):
+  - "I found these DDD patterns in the codebase: [list]. Which ones have you seen vs which are new to you?"
+  - "What triggered the interest — a task, a code review, curiosity?"
+
+The user can answer all, some, or just freeform. No pressure to pick or narrow.
+
+### Q3: Time horizon
+
+"What's your time horizon? What do you want solid this quarter vs this year?"
+
+### Synthesize
+
+After the 3 questions and optional codebase analysis, synthesize into concrete, tagged goals. Present them in a table for the user to confirm, adjust, or add to before writing.
+
+**Goals vs backlog — do not confuse them:**
+- **Goals** describe the level or capability the user wants to reach. They answer "what does success look like?" Examples: "be able to justify architectural choices", "lead technical studies", "read any part of the codebase independently".
+- **Backlog items** are specific topics or technologies to learn. They answer "what do I need to study?" Examples: "NestJS dynamic modules", "Lambda patterns", "MongoDB transactions".
+
+Goals go in `learning-goals.md`. Backlog items go in the Notion backlog as cards. Do NOT list specific technologies or frameworks as goals — those are backlog cards prioritized against the goals.
 
 ## Phase 2: Write Goals File
 
