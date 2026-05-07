@@ -109,6 +109,8 @@ Write `~/.claude/skills/learning-system/learning-goals.md` with this structure:
 
 Page body is reserved for pager content written by the `teacher` skill after teaching.
 
+**Important:** Notion may default Status to the workspace language (e.g. French: "Pas commencé", "Terminé"). After creating the database, verify Status values are `To Do` and `Taught`. If not, update them using the Notion MCP update-data-source tool.
+
 4. Resolve the exam results ledger path. The ledger must live in the user's project-specific Claude memory directory. Determine the path by:
    - Finding the current project's memory directory (typically `~/.claude/projects/<project-hash>/memory/`)
    - The file is named `exam-results.md`
