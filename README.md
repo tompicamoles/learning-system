@@ -181,7 +181,7 @@ An append-only YAML ledger stored in your project's Claude memory directory (pat
 | Goal Alignment | multi_select | Tags matching your goals |
 | Code Grounding | rich_text | File paths for codebase grounding |
 | Last Taught | date | Date of last lesson |
-| Notes | rich_text | Free-form notes |
+
 
 Page body contains the lesson pager after teaching.
 

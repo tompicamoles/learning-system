@@ -105,7 +105,7 @@ Write `~/.claude/skills/learning-system/learning-goals.md` with this structure:
 | Goal Alignment | multi_select | Tags matching goals from Phase 2 |
 | Code Grounding | rich_text | File paths for codebase grounding |
 | Last Taught | date | Date of last lesson |
-| Notes | rich_text | Free-form notes |
+
 
 Page body is reserved for pager content written by the `teacher` skill after teaching.
 

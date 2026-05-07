@@ -23,7 +23,7 @@ User wants to queue a topic for later learning.
    - If the topic is too large for a 30-min crash course, propose splitting into separate cards (one topic per card)
 4. **Code Grounding**: accept whatever the user provides (file paths, snippets, references). Do NOT search the codebase -- that is the `teacher` skill's job during the actual lesson.
 5. Create card in Notion "Learning Backlog" using `Notion:create-database-row`. Fields:
-   - Title, Priority, Size, Status = "To Do", Goal Alignment tags, Code Grounding (if provided), Notes
+   - Title, Priority, Size, Status = "To Do", Goal Alignment tags, Code Grounding (if provided)
 
 ## Mode 2: Programmatic
 
