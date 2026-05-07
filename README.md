@@ -10,15 +10,11 @@ As a software engineer working in a large codebase, you encounter patterns, arch
 
 Six Claude Code skills that form a complete learning loop:
 
-```
-  add-to-backlog -----> crash-course -----> refresher-exam
-  (queue topic)         (30 min)            (spaced rep.)
-       ^                     |                    |
-       |                     v                    | poorly scored?
-       |               quick-tutorial             | reschedule
-       |               (5-10 min)                 |
-       +------------------------------------------+
-```
+1. **Queue** a topic → `/add-to-backlog`
+2. **Learn** it → `/crash-course` (30 min, with exam) or `/quick-tutorial` (5-10 min, no exam)
+3. **Review** it later → `/refresher-exam` (spaced repetition picks what's due)
+4. **Scored poorly?** → the system suggests rescheduling the lesson
+5. Back to step 2
 
 Every lesson is grounded in real code from your codebase (file:line citations), and every exam question references actual code you work with daily.
 
