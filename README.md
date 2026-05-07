@@ -68,8 +68,9 @@ The refresher-exam skill uses a simplified SM-2 algorithm:
 ### Prerequisites
 
 - Claude Code with skills support
+- The **Notion MCP plugin** installed (`/plugin install @anthropic/notion`)
 - A Notion workspace
-- A codebase to learn from
+- A codebase to learn from (optional but recommended)
 
 ### Step 1: Install the plugin
 
