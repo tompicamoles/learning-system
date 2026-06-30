@@ -64,11 +64,23 @@ Questions should be short. A question that takes the student two minutes to *par
 
 ### Phase 4 — Correction (target: ~5 min)
 
-For each answer:
+For each answer, use this exact ordering so the student can grade themselves at a glance:
 
-- Lead with what was **specifically** right ("you correctly identified X"), not empty praise
-- Explain **why** mistakes are mistakes, not just what the right answer is
-- Tag: correct / partial / missed
+1. **The question (verbatim)** — restate the original question label *and full question text* first. The student may have scrolled past it. Format: `**Q2 (Code-reading):** Which DDD zoom level does…` Do NOT paraphrase or shorten — quote the question as originally posed.
+2. **The student's answer (quoted)** — show what they actually wrote, in italics or a blockquote, so the comparison is visible.
+3. **The correction** — lead with what was **specifically** right ("you correctly identified X"), not empty praise. Then explain **why** any mistakes are mistakes, not just what the right answer is. Tag: correct / partial / missed.
+
+The shape of one corrected item should look like:
+
+```
+**Q2 (Code-reading):** <full original question text>
+
+> <student's answer, quoted>
+
+Verdict: correct. You nailed <specific thing>. One refinement: <…>
+```
+
+Never collapse steps 1 and 2 into "Q2: <student's answer>" — that loses the question and makes the correction unreadable when the student re-reads later.
 
 **Match correction length to answer length.** A one-sentence student answer deserves a one-paragraph correction, not a one-page lecture. If the student skipped a question or said "no time" / "don't know", give a short model answer (2–3 sentences) and move on — don't turn a skip into a full retelling of the lesson.
 
@@ -135,6 +147,7 @@ If the session was ad-hoc (no Notion link), use `add-to-backlog` in programmatic
 | Exam with only conceptual questions | Mix conceptual + code-reading + trade-off + failure-mode (3-4 total) |
 | Correcting a skipped/brief answer at full length | Match correction length to answer length. "No time" = 2-3 sentence model answer. |
 | Correction starting with "good try" | Lead with a **specific** strength before correcting |
+| Quoting the student's answer instead of the question | Show the full original **question** first, then the student's quoted answer, then the correction. Three blocks, in that order — never collapse. |
 | Skipping the `teacher` skill invocation | It's required, not decorative |
 | Writing the pager to a file instead of chat | Output directly in chat as rendered markdown |
 | Pager longer than 2 pages | Compress with tables; a pager is not a chapter |

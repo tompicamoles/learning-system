@@ -1,16 +1,20 @@
 # How I Use AI to Skill Up as a Junior Engineer (And Why That's the Point)
 
-When I joined my team a year ago, I couldn't follow how a request became a database write. Everything was async — events fired into SQS queues, processed by Lambdas, retried, dead-lettered, eventually persisted. I thought it was overengineered.
+There's a growing narrative in tech: AI writes code now, so what's the point of junior engineers? I think that's exactly backwards. AI doesn't replace the need to learn — it gives you the best learning partner you've ever had.
 
-A few weeks ago, the government API we submit declarations to went down for several hours. Messages piled up in the DLQ. Once it came back, the recovery was mostly redriving the queue and letting the system catch up. I didn't lead the operation, but I could follow what was happening and ask the right questions — not because of one lesson, but because months of working in the codebase had given me the practice, and a recent crash course on async messaging had given me the theory to name what I was seeing.
+I'm a junior software engineer at PayFit. I work in a large TypeScript monorepo — NestJS, MongoDB, DDD, hexagonal architecture, AWS Lambdas, SQS, etc... A year ago, I was building React components from a Codecademy syllabus. Now I want to close the gap to confirmed engineer and bring as much value as I can to my team. So I built a system that teaches me 30 minutes a day, grounded in the actual code I ship.
 
-I'm a junior engineer at PayFit, two months into an experiment: every morning before work, 30 minutes on a learning system I built that's grounded in the code I ship. It doesn't teach me anything on its own. It's a way to dig into things still blurry to me — fast, alone, tied to real files — alongside the daily work of writing code, sitting in reviews, and asking colleagues I'd otherwise hesitate to bother. The SQS crash course happened a few weeks before the gov API went down. I don't know yet how much of the credit it deserves. But the system stays.
+This article is about that system.
 
-## Threat or partner
+## The controversy: juniors in the age of AI
 
-The "are juniors still useful" debate is everywhere, and I don't have a confident answer. AI agents already ship features faster than I can. Whether companies will keep hiring and training juniors at scale isn't a question I can settle from where I sit.
+Let's address the elephant in the room. AI coding agents can ship features faster than most junior engineers. Claude, Copilot, Cursor — they generate working code in seconds. So why hire a junior?
 
-What I can settle is what I do with the tool in front of me. I treat AI as a partner — one that should make me a better engineer, not just a faster one. The rest of this article is about how.
+Because shipping code is not the job. Understanding _why_ that code works, _when_ it will break, and _what_ to build next — that's the job. An AI agent can implement the outbox pattern. It can't decide whether your system needs one. It can write a NestJS module. It can't explain why the dependency injection is structured the way it is, or redesign it when the requirements change.
+
+I believe the junior engineers who will thrive are the ones who use AI to accelerate their understanding, not just their output. Not by memorizing the implementation details that AI already handles perfectly, but by building the judgment to challenge what an agent generates, learn from it, and eventually surpass it.
+
+That's what I'm building toward.
 
 ## My goals
 
